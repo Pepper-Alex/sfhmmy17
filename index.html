@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>Componous — ΣΦΗΜΜΥ17</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:#0a0a0f;color:#e0e0e0;min-height:100vh;-webkit-text-size-adjust:100%}
+.gbg{position:fixed;top:0;left:0;right:0;bottom:0;background-image:radial-gradient(circle at 1px 1px,rgba(0,212,170,.02) 1px,transparent 0);background-size:44px 44px;pointer-events:none;z-index:0}
+#pt{position:fixed;top:0;left:0;right:0;height:3px;background:#1a1a28;z-index:100}
+#pv{height:100%;width:0%;background:-webkit-linear-gradient(left,#00d4aa,#00a8ff);background:linear-gradient(90deg,#00d4aa,#00a8ff);-webkit-transition:width .4s;transition:width .4s}
+.w{max-width:600px;margin:0 auto;padding:32px 16px;position:relative;z-index:1}
+.hd{text-align:center;margin-bottom:32px}
+.lg{font-family:Courier,'Courier New',monospace;font-size:26px;font-weight:700;color:#00d4aa;letter-spacing:3px;margin-bottom:4px}
+.tg{font-family:Courier,monospace;font-size:11px;color:rgba(0,212,170,.35);letter-spacing:2px;text-transform:uppercase}
+.bg{margin-top:14px;padding:7px 16px;display:inline-block;background:rgba(0,212,170,.04);border:1px solid rgba(0,212,170,.1);border-radius:6px;font-family:Courier,monospace;font-size:11px;color:#00d4aa}
+.nv{text-align:center;margin-bottom:24px}
+.nv span{display:inline-block;padding:3px 10px;border-radius:16px;font-size:10px;font-weight:600;margin:2px}
+.nv .ac{background:rgba(0,212,170,.1);color:#00d4aa}.nv .dn{color:rgba(0,212,170,.35)}.nv .ft{color:#333}
+.sc{-webkit-animation:fi .4s;animation:fi .4s}
+@-webkit-keyframes fi{from{opacity:0;-webkit-transform:translateY(12px)}to{opacity:1;-webkit-transform:translateY(0)}}
+@keyframes fi{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.tt{font-size:20px;font-weight:700;color:#fff;margin-bottom:6px}
+.su{font-size:13px;opacity:.5;line-height:1.5;margin-bottom:20px}
+.fg>*{margin-bottom:14px}
+.lb{display:block;font-size:12px;color:#666;margin-bottom:5px}
+input[type=text],input[type=email],select,textarea{display:block;width:100%;padding:11px 12px;background:#101018;border:1px solid #1a1a28;border-radius:8px;color:#e0e0e0;font-size:16px;font-family:inherit;-webkit-appearance:none;appearance:none;outline:none;-webkit-transition:border-color .2s;transition:border-color .2s}
+input:focus,select:focus,textarea:focus{border-color:rgba(0,212,170,.3)}
+textarea{min-height:80px;line-height:1.5;resize:vertical}
+textarea.tl{min-height:120px}
+select{cursor:pointer}
+.cd{background:#101018;border:1px solid #1a1a28;border-radius:12px;padding:16px;margin-bottom:14px}
+.qt{font-size:14px;line-height:1.6;color:#fff;font-weight:500;margin-bottom:4px}
+.qh{font-size:11px;color:rgba(0,212,170,.5);font-style:italic;margin-bottom:10px}
+.op{display:block;padding:10px 12px;background:#08080d;border:1px solid #1a1a28;border-radius:7px;color:#999;cursor:pointer;font-size:14px;margin-bottom:7px;-webkit-transition:all .15s;transition:all .15s;-webkit-tap-highlight-color:transparent}
+.op.s{background:rgba(0,212,170,.07);border-color:#00d4aa;color:#00d4aa}
+.tp{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;padding:11px 14px;background:#08080d;border:1px solid #1a1a28;border-radius:8px;color:#999;cursor:pointer;font-size:14px;margin-bottom:8px;-webkit-transition:all .15s;transition:all .15s;-webkit-tap-highlight-color:transparent}
+.tp.s{background:rgba(0,212,170,.07);border-color:#00d4aa;color:#00d4aa}
+.tl2{width:26px;height:26px;border-radius:50%;border:2px solid #2a2a3a;display:-webkit-inline-flex;display:inline-flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;font-size:12px;font-weight:700;color:#555;margin-right:10px;-webkit-flex-shrink:0;flex-shrink:0;-webkit-transition:all .15s;transition:all .15s}
+.tp.s .tl2{background:#00d4aa;border-color:#00d4aa;color:#0a0a0f}
+.mp{display:-webkit-box;display:-webkit-flex;display:flex;margin-top:8px}
+.mx{-webkit-box-flex:1;-webkit-flex:1;flex:1;padding:14px 10px;background:#08080d;border:1px solid #1a1a28;border-radius:8px;color:#999;cursor:pointer;text-align:center;font-size:13px;line-height:1.4;margin-right:8px;-webkit-transition:all .15s;transition:all .15s;-webkit-tap-highlight-color:transparent}
+.mx:last-child{margin-right:0}
+.mx.s{background:rgba(0,212,170,.07);border-color:#00d4aa;color:#00d4aa}
+.sk{display:-webkit-box;display:-webkit-flex;display:flex;margin-top:12px}
+.si{-webkit-box-flex:1;-webkit-flex:1;flex:1;padding:8px 2px;background:#08080d;border:1px solid #1a1a28;border-radius:6px;cursor:pointer;text-align:center;margin-right:6px;-webkit-transition:all .15s;transition:all .15s;-webkit-tap-highlight-color:transparent}
+.si:last-child{margin-right:0}
+.si.s{background:rgba(0,212,170,.08);border-color:#00d4aa}
+.sn{font-size:16px;font-weight:700;color:#555;font-family:Courier,monospace}.si.s .sn{color:#00d4aa}
+.sl{font-size:9px;color:#444;margin-top:2px}.si.s .sl{color:#00d4aa}
+.dt{text-align:center;margin:12px 0}
+.dt i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#1a1a28;margin:0 3px}
+.dt i.ac{background:#00d4aa}.dt i.dn{background:rgba(0,212,170,.27)}
+.br{display:-webkit-box;display:-webkit-flex;display:flex;margin-top:18px}
+.bn{-webkit-box-flex:1;-webkit-flex:1;flex:1;padding:13px;border:none;border-radius:9px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;background:-webkit-linear-gradient(315deg,#00d4aa,#00a8ff);background:linear-gradient(135deg,#00d4aa,#00a8ff);color:#0a0a0f;-webkit-tap-highlight-color:transparent}
+.bn[disabled]{background:#1a1a28;color:#555;cursor:default}
+.bb{padding:13px 18px;background:transparent;color:#666;border:1px solid #1a1a28;border-radius:9px;font-size:14px;cursor:pointer;margin-right:10px;-webkit-tap-highlight-color:transparent}
+.ck{width:76px;height:76px;border-radius:50%;margin:0 auto 24px;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;font-size:36px;color:#00d4aa;background:rgba(0,212,170,.07)}
+.mr{display:inline-block;padding:5px 14px;border-radius:16px;font-family:Courier,monospace;font-weight:700;font-size:15px;letter-spacing:2px;background:rgba(0,212,170,.1);color:#00d4aa;border:1px solid rgba(0,212,170,.2)}
+.ov{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,15,.92);display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-direction:column;flex-direction:column;z-index:200}
+.sp{width:36px;height:36px;border:3px solid #1a1a28;border-top-color:#00d4aa;border-radius:50%;-webkit-animation:ro 1s linear infinite;animation:ro 1s linear infinite}
+@-webkit-keyframes ro{to{-webkit-transform:rotate(360deg)}}
+@keyframes ro{to{transform:rotate(360deg)}}
+.f2{margin-top:48px;text-align:center;opacity:.2;font-size:10px}
+</style>
+</head>
+<body>
+<div class="gbg"></div>
+<div id="pt"><div id="pv"></div></div>
+<div class="w" id="app">
+  <div class="hd"><div class="lg" id="ltap">COMPONOUS</div><div class="tg">Photonics · Sensing · Innovation</div><div class="bg">ΣΦΗΜΜΥ17 · Πολυτεχνείο Κρήτης</div></div>
+  <div id="nv" class="nv"></div>
+  <div id="ct"></div>
+  <div class="f2">&copy; 2026 Componous</div>
+</div>
+<script>
+(function(){
+// ═══ GOOGLE SHEETS URL ═══
+var SHEET_URL="https://script.google.com/macros/s/AKfycbwIz-lxYm5aZOALVb8OEeHWyo7hHmHPCUON7GDguitSU9TO3fJjqMbqk2mXLA0vf94X/exec";
+
+var LB=["Στοιχεία","Ψυχογράφημα","Χαρακτήρας","Personality","Τεχνικά","Σενάρια"],TT=6;
+var pQ=[{id:"p1",q:"Τελευταίο βιβλίο/podcast; Γιατί;",h:"Αν δεν διαβάζεις πες το."},{id:"p2",q:"Μαγειρεύεις; Signature φαγητό;",h:""},{id:"p3",q:"Δουλειά στη Φλώρινα — πρώτη σκέψη;",h:"Ειλικρίνεια."},{id:"p4",q:"Έζησες μακριά; Πώς;",h:""},{id:"p5",q:"Τι ομάδα;",h:""}];
+var cQ=[{id:"c1",t:"o",q:"Ομαδική, μέλος δεν κάνει τίποτα. Ρεαλιστικά;",h:""},{id:"c2",t:"o",q:"Απέτυχες. Τι πήρες;",h:"Project, μάθημα, οτιδήποτε."},{id:"c3",t:"m",q:"Παρασκευή βράδυ;",o:["Βγαίνω","Σπίτι","Project","Εξαρτάται"]},{id:"c4",t:"o",q:"Project χωρίς οδηγίες. Πρώτο βήμα;",h:""},{id:"c5",t:"o",q:"Weird skill;",h:"Χιούμορ."},{id:"c6",t:"s",q:"\"Μέτρια μόνος > τέλεια σε ομάδα\"",sl:["Καθόλου","Λίγο","Μέτρια","Αρκετά","Απόλυτα"]}];
+var mQ=[{d:"EI",q:"Networking:",a:"Πολλούς",b:"1-2 βαθιά",aV:"E",bV:"I"},{d:"EI",q:"Φορτίζω:",a:"Κόσμο",b:"Μόνος",aV:"E",bV:"I"},{d:"EI",q:"Δουλειά:",a:"Open, brainstorm",b:"Ήσυχο, focus",aV:"E",bV:"I"},{d:"SN",q:"Πρόβλημα:",a:"Facts πρώτα",b:"Μεγάλη εικόνα",aV:"S",bV:"N"},{d:"SN",q:"Ενθουσιάζει:",a:"Hands-on",b:"Σχεδιασμός",aV:"S",bV:"N"},{d:"SN",q:"Εαυτός:",a:"Πρακτικός",b:"Οραματιστής",aV:"S",bV:"N"},{d:"TF",q:"Αποφάσεις:",a:"Λογική",b:"Άνθρωποι",aV:"T",bV:"F"},{d:"TF",q:"Διαφωνία:",a:"Δίκιο βάσει facts",b:"Λύση για όλους",aV:"T",bV:"F"},{d:"TF",q:"Ομάδα:",a:"Αποτελεσματικότητα",b:"Αρμονία",aV:"T",bV:"F"},{d:"JP",q:"Deadline:",a:"Πλάνο τώρα",b:"Υπό πίεση",aV:"J",bV:"P"},{d:"JP",q:"Μέρα:",a:"To-do",b:"Ροή",aV:"J",bV:"P"},{d:"JP",q:"Ταξίδι:",a:"Itinerary",b:"On the spot",aV:"J",bV:"P"}];
+var tQ=[{id:"t1",q:"FBG μετράει;",o:["Θερμοκρασία","Strain & θερμ. (μεταβολή λ)","Αντίσταση","Ακτινοβολία"],c:1},{id:"t2",q:"Op-amp Rf=100k Rin=10k Gain;",o:["+10","-10","+100","-0.1"],c:1},{id:"t3",q:"FBG vs strain gauges;",o:["Φθηνότεροι","ΗΜ, multiplex, ενσωμάτωση","Πιεζοηλ.","Στατική"],c:1},{id:"t4",q:"SPI;",o:["Serial Photonic","Sync Pulse","Serial Peripheral","Signal Processing"],c:2},{id:"t5",q:"ADC;",o:["Αναλ.→ψηφ.","Ενίσχυση οπτ.","Θερμ. laser","Flash"],c:0}];
+var sQ=[{id:"s1",q:"FBG drift σε δεξαμενή. Βήματα;",h:"Σκέψου lab."},{id:"s2",q:"8 σημεία θερμ., 1 ίνα. Hardware;",h:"Τι θα έψαχνες;"},{id:"s3",q:"Πελάτης: refund. Τι κάνεις;",h:"Τεχνικά & επικοινωνιακά."}];
+var TN={INTJ:"Architect",INTP:"Logician",ENTJ:"Commander",ENTP:"Debater",INFJ:"Advocate",INFP:"Mediator",ENFJ:"Protagonist",ENFP:"Campaigner",ISTJ:"Logistician",ISFJ:"Defender",ESTJ:"Executive",ESFJ:"Consul",ISTP:"Virtuoso",ISFP:"Adventurer",ESTP:"Entrepreneur",ESFP:"Entertainer"};
+
+var sec=0,tq=0,mq=0,inf={n:"",e:"",p:"",y:"",d:"",i:""},an={},ta={},ma={},tn=0,tt2=null;
+function E(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+function G(id){return document.getElementById(id)}
+function mb(){var s={E:0,I:0,S:0,N:0,T:0,F:0,J:0,P:0};for(var k in ma)if(ma.hasOwnProperty(k))s[ma[k]]=(s[ma[k]]||0)+1;return(s.E>=s.I?"E":"I")+(s.S>=s.N?"S":"N")+(s.T>=s.F?"T":"F")+(s.J>=s.P?"J":"P")}
+function gr(ids){for(var i=0;i<ids.length;i++){var el=G("a-"+ids[i]);if(el)an[ids[i]]=el.value}}
+function nv(){var h="";if(sec<TT)for(var i=0;i<LB.length;i++)h+='<span class="'+(i===sec?"ac":i<sec?"dn":"ft")+'">'+LB[i]+"</span>";G("nv").innerHTML=h;G("pv").style.width=Math.min(100,Math.round(sec/TT*100))+"%"}
+function go(){nv();window.scrollTo(0,0);[r0,r1,r2,r3,r4,r5,r6][sec]()}
+function so(a,c){var h="";for(var i=0;i<a.length;i++)h+='<option value="'+E(a[i])+'"'+(c===a[i]?" selected":"")+">"+(a[i]||"Επίλεξε...")+"</option>";return h}
+function oq(q,t){return'<div class="cd"><div class="qt">'+E(q.q)+"</div>"+(q.h?'<div class="qh">'+E(q.h)+"</div>":"")+'<textarea id="a-'+q.id+'"'+(t?' class="tl"':"")+' placeholder="Γράψε εδώ...">'+E(an[q.id]||"")+"</textarea></div>"}
+function cl(p,c,v){var s=p.querySelectorAll("."+c);for(var i=0;i<s.length;i++)s[i].className=c;v.className=c+" s"}
+
+function r0(){G("ct").innerHTML='<div class="sc"><div class="tt">Πες μας λίγα</div><div class="su">~20 λεπτά.</div><div class="fg"><div><span class="lb">Ονοματεπώνυμο *</span><input type="text" id="fn" value="'+E(inf.n)+'" placeholder="Μαρία Παπαδοπούλου"></div><div><span class="lb">Email *</span><input type="email" id="fe" value="'+E(inf.e)+'" placeholder="email@example.com"></div><div><span class="lb">Τηλ</span><input type="text" id="fp" value="'+E(inf.p)+'" placeholder="69..."></div><div><span class="lb">Έτος</span><select id="fy">'+so(["","3ο","4ο","5ο","MSc","Απόφοιτος"],inf.y)+'</select></div><div><span class="lb">Κατεύθυνση</span><select id="fd">'+so(["","Φωτονική","Ηλεκτρονική","Τηλεπ.","Ενέργεια","Embedded","Υλικά","Composites","Άλλο"],inf.d)+'</select></div><div><span class="lb">Ενδιαφέρον</span><select id="fi">'+so(["","Πρακτική","Εργασία","Και τα δύο","Μάθω"],inf.i)+"</select></div></div>"+'<div class="br"><button class="bn" id="b0">Πάμε →</button></div></div>';
+G("b0").onclick=function(){inf.n=G("fn").value;inf.e=G("fe").value;inf.p=G("fp").value;inf.y=G("fy").value;inf.d=G("fd").value;inf.i=G("fi").value;if(!inf.n.trim()||!inf.e.trim()){alert("Όνομα & email");return}sec=1;go()}}
+
+function r1(){var ids=[];var h='<div class="sc"><div class="tt">Ψυχογράφημα</div><div class="su">Σε γνωρίζουμε.</div><div class="fg">';for(var i=0;i<pQ.length;i++){ids.push(pQ[i].id);h+=oq(pQ[i])}h+='</div><div class="br"><button class="bb" id="x1">←</button><button class="bn" id="b1">Χαρακτήρας →</button></div></div>';G("ct").innerHTML=h;
+G("x1").onclick=function(){gr(ids);sec=0;go()};G("b1").onclick=function(){gr(ids);sec=2;go()}}
+
+function r2(){var oi=[];var h='<div class="sc"><div class="tt">Χαρακτήρας</div><div class="su">Τι σε ξεχωρίζει.</div><div class="fg">';
+for(var i=0;i<cQ.length;i++){var q=cQ[i];if(q.t==="o"){oi.push(q.id);h+=oq(q)}else if(q.t==="m"){h+='<div class="cd"><div class="qt">'+E(q.q)+'</div>';for(var j=0;j<q.o.length;j++)h+='<div class="op'+(an[q.id]===q.o[j]?" s":"")+'" data-q="'+q.id+'" data-v="'+E(q.o[j])+'">'+E(q.o[j])+"</div>";h+="</div>"}else if(q.t==="s"){h+='<div class="cd"><div class="qt">'+E(q.q)+'</div><div class="sk">';for(var j=0;j<q.sl.length;j++){var v=j+1;h+='<div class="si'+(an[q.id]===v?" s":"")+'" data-q="'+q.id+'" data-v="'+v+'"><div class="sn">'+v+'</div><div class="sl">'+E(q.sl[j])+"</div></div>"}h+="</div></div>"}}
+h+='</div><div class="br"><button class="bb" id="x2">←</button><button class="bn" id="b2">Personality →</button></div></div>';G("ct").innerHTML=h;
+var ops=G("ct").querySelectorAll(".op");for(var i=0;i<ops.length;i++)ops[i].onclick=function(){an[this.getAttribute("data-q")]=this.getAttribute("data-v");cl(this.parentNode,"op",this)};
+var sis=G("ct").querySelectorAll(".si");for(var i=0;i<sis.length;i++)sis[i].onclick=function(){an[this.getAttribute("data-q")]=parseInt(this.getAttribute("data-v"));cl(this.parentNode,"si",this)};
+G("x2").onclick=function(){gr(oi);sec=1;go()};G("b2").onclick=function(){gr(oi);sec=3;mq=0;go()}}
+
+function r3(){var q=mQ[mq];var h='<div class="sc"><div class="tt">Personality</div><div class="su">'+(mq+1)+"/"+mQ.length+"</div>";h+='<div class="cd"><div class="qt" style="font-size:15px;margin-bottom:12px">'+E(q.q)+'</div><div class="mp"><div class="mx'+(ma[mq]===q.aV?" s":"")+'" data-v="'+q.aV+'">'+E(q.a)+'</div><div class="mx'+(ma[mq]===q.bV?" s":"")+'" data-v="'+q.bV+'">'+E(q.b)+"</div></div></div>";h+='<div class="dt">';for(var i=0;i<mQ.length;i++)h+='<i class="'+(i===mq?"ac":ma[i]?"dn":"")+'"></i>';h+="</div>";h+='<div class="br"><button class="bb" id="x3">←</button><button class="bn" id="b3"'+(ma[mq]==null?" disabled":"")+">"+(mq<mQ.length-1?"Επόμενη →":"Τεχνικά →")+"</button></div></div>";G("ct").innerHTML=h;
+var ms=G("ct").querySelectorAll(".mx");for(var i=0;i<ms.length;i++)ms[i].onclick=function(){ma[mq]=this.getAttribute("data-v");r3()};
+G("x3").onclick=function(){if(mq>0){mq--;r3()}else{sec=2;go()}};G("b3").onclick=function(){if(ma[mq]==null)return;if(mq<mQ.length-1){mq++;r3()}else{sec=4;tq=0;go()}}}
+
+function r4(){var q=tQ[tq];var h='<div class="sc"><div class="tt">Τεχνικά</div><div class="su">'+(tq+1)+"/"+tQ.length+"</div>";h+='<div class="cd"><div class="qt" style="font-size:15px;margin-bottom:14px">'+E(q.q)+"</div>";for(var i=0;i<q.o.length;i++)h+='<div class="tp'+(ta[tq]===i?" s":"")+'" data-i="'+i+'"><span class="tl2">'+String.fromCharCode(65+i)+"</span>"+E(q.o[i])+"</div>";h+="</div>";h+='<div class="dt">';for(var i=0;i<tQ.length;i++)h+='<i class="'+(i===tq?"ac":ta[i]!=null?"dn":"")+'"></i>';h+="</div>";h+='<div class="br"><button class="bb" id="x4">←</button><button class="bn" id="b4"'+(ta[tq]==null?" disabled":"")+">"+(tq<tQ.length-1?"Επόμενη →":"Σενάρια →")+"</button></div></div>";G("ct").innerHTML=h;
+var ts=G("ct").querySelectorAll(".tp");for(var i=0;i<ts.length;i++)ts[i].onclick=function(){ta[tq]=parseInt(this.getAttribute("data-i"));r4()};
+G("x4").onclick=function(){if(tq>0){tq--;r4()}else{sec=3;mq=mQ.length-1;go()}};G("b4").onclick=function(){if(ta[tq]==null)return;if(tq<tQ.length-1){tq++;r4()}else{sec=5;go()}}}
+
+function r5(){var ids=[];var h='<div class="sc"><div class="tt">Σενάρια</div><div class="su">Πώς σκέφτεσαι.</div><div class="fg">';for(var i=0;i<sQ.length;i++){ids.push(sQ[i].id);h+=oq(sQ[i],true)}h+='</div><div class="br"><button class="bb" id="x5">←</button><button class="bn" id="b5">Υποβολή ✓</button></div></div>';G("ct").innerHTML=h;
+G("x5").onclick=function(){gr(ids);tq=tQ.length-1;sec=4;go()};
+G("b5").onclick=function(){gr(ids);var tc=0;for(var i=0;i<tQ.length;i++)if(ta[i]===tQ[i].c)tc++;var ts=Math.round(tc/tQ.length*100);var mt=mb(),mn=TN[mt]||mt;
+var pl={name:inf.n,email:inf.e,phone:inf.p,year:inf.y,direction:inf.d,interest:inf.i,answers:JSON.parse(JSON.stringify(an)),techAnswers:JSON.parse(JSON.stringify(ta)),mbtiAnswers:JSON.parse(JSON.stringify(ma)),mbtiType:mt,mbtiName:mn,techCorrect:tc,techScore:ts,timestamp:Date.now()};
+var ov=document.createElement("div");ov.className="ov";ov.innerHTML='<div class="sp"></div><div style="color:#00d4aa;font-size:13px;margin-top:14px">Αποστολή...</div>';document.body.appendChild(ov);
+function done(){if(ov.parentNode)ov.parentNode.removeChild(ov);sec=6;go()}
+if(SHEET_URL.indexOf("script.google.com")!==-1){var x=new XMLHttpRequest();x.open("POST",SHEET_URL,true);x.setRequestHeader("Content-Type","text/plain");x.onload=done;x.onerror=done;x.send(JSON.stringify(pl))}else{console.log("Payload:",pl);setTimeout(done,400)}}}
+
+function r6(){var mt=mb(),mn=TN[mt]||"";G("ct").innerHTML='<div class="sc" style="text-align:center;padding-top:40px"><div class="ck">✓</div><div style="font-size:22px;font-weight:700;color:#fff;margin-bottom:14px">Ευχαριστούμε, '+E(inf.n.split(" ")[0])+'!</div><div style="margin-bottom:6px"><span class="mr">'+mt+'</span></div><div style="font-size:14px;color:#00d4aa;margin-bottom:4px">'+E(mn)+'</div><div style="font-size:11px;opacity:.3;margin-bottom:22px">16personalities.com</div><div style="font-size:14px;opacity:.45;line-height:1.6;max-width:380px;margin:0 auto">Αν ταιριάζεις, θα επικοινωνήσουμε.</div><div style="margin-top:30px;padding:14px 24px;background:#101018;border:1px solid #1a1a28;border-radius:10px;display:inline-block;font-family:Courier,monospace;font-size:12px;color:#00d4aa">componous.com</div></div>';G("pv").style.width="100%"}
+
+G("ltap").onclick=function(){tn++;clearTimeout(tt2);tt2=setTimeout(function(){tn=0},1500);if(tn>=5){tn=0;alert("Data → Google Sheets")}};
+go()})();
+</script>
+</body>
+</html>

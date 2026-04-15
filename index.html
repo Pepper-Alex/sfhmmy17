@@ -35,23 +35,28 @@ select{cursor:pointer}
 .qh{font-size:11px;color:rgba(0,212,170,.5);font-style:italic;margin-bottom:10px}
 .op{display:block;padding:10px 12px;background:#08080d;border:1px solid #1a1a28;border-radius:7px;color:#999;cursor:pointer;font-size:14px;margin-bottom:7px;-webkit-transition:all .15s;transition:all .15s;-webkit-tap-highlight-color:transparent}
 .op.s{background:rgba(0,212,170,.07);border-color:#00d4aa;color:#00d4aa}
-.tp{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;padding:11px 14px;background:#08080d;border:1px solid #1a1a28;border-radius:8px;color:#999;cursor:pointer;font-size:14px;margin-bottom:8px;-webkit-transition:all .15s;transition:all .15s;-webkit-tap-highlight-color:transparent}
-.tp.s{background:rgba(0,212,170,.07);border-color:#00d4aa;color:#00d4aa}
-.tl2{width:26px;height:26px;border-radius:50%;border:2px solid #2a2a3a;display:-webkit-inline-flex;display:inline-flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;font-size:12px;font-weight:700;color:#555;margin-right:10px;-webkit-flex-shrink:0;flex-shrink:0;-webkit-transition:all .15s;transition:all .15s}
-.tp.s .tl2{background:#00d4aa;border-color:#00d4aa;color:#0a0a0f}
-.mp{display:-webkit-box;display:-webkit-flex;display:flex;margin-top:8px}
-.mx{-webkit-box-flex:1;-webkit-flex:1;flex:1;padding:14px 10px;background:#08080d;border:1px solid #1a1a28;border-radius:8px;color:#999;cursor:pointer;text-align:center;font-size:13px;line-height:1.4;margin-right:8px;-webkit-transition:all .15s;transition:all .15s;-webkit-tap-highlight-color:transparent}
-.mx:last-child{margin-right:0}
-.mx.s{background:rgba(0,212,170,.07);border-color:#00d4aa;color:#00d4aa}
+/* Likert scale */
+.lk{margin-top:10px}
+.lk-labels{display:-webkit-box;display:-webkit-flex;display:flex;margin-bottom:6px}
+.lk-labels span{-webkit-box-flex:1;-webkit-flex:1;flex:1;text-align:center;font-size:9px;color:#555}
+.lk-labels span:first-child{text-align:left}
+.lk-labels span:last-child{text-align:right}
+.lk-row{display:-webkit-box;display:-webkit-flex;display:flex}
+.lk-dot{-webkit-box-flex:1;-webkit-flex:1;flex:1;text-align:center;padding:8px 0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.lk-dot i{display:inline-block;border-radius:50%;border:2px solid #2a2a3a;-webkit-transition:all .15s;transition:all .15s}
+.lk-dot.s i{background:#00d4aa;border-color:#00d4aa}
+/* Scale */
 .sk{display:-webkit-box;display:-webkit-flex;display:flex;margin-top:12px}
 .si{-webkit-box-flex:1;-webkit-flex:1;flex:1;padding:8px 2px;background:#08080d;border:1px solid #1a1a28;border-radius:6px;cursor:pointer;text-align:center;margin-right:6px;-webkit-transition:all .15s;transition:all .15s;-webkit-tap-highlight-color:transparent}
 .si:last-child{margin-right:0}
 .si.s{background:rgba(0,212,170,.08);border-color:#00d4aa}
 .sn{font-size:16px;font-weight:700;color:#555;font-family:Courier,monospace}.si.s .sn{color:#00d4aa}
 .sl{font-size:9px;color:#444;margin-top:2px}.si.s .sl{color:#00d4aa}
+/* Dots */
 .dt{text-align:center;margin:12px 0}
 .dt i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#1a1a28;margin:0 3px}
 .dt i.ac{background:#00d4aa}.dt i.dn{background:rgba(0,212,170,.27)}
+/* Buttons */
 .br{display:-webkit-box;display:-webkit-flex;display:flex;margin-top:18px}
 .bn{-webkit-box-flex:1;-webkit-flex:1;flex:1;padding:13px;border:none;border-radius:9px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;background:-webkit-linear-gradient(315deg,#00d4aa,#00a8ff);background:linear-gradient(135deg,#00d4aa,#00a8ff);color:#0a0a0f;-webkit-tap-highlight-color:transparent}
 .bn[disabled]{background:#1a1a28;color:#555;cursor:default}
@@ -59,7 +64,7 @@ select{cursor:pointer}
 .ck{width:76px;height:76px;border-radius:50%;margin:0 auto 24px;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;font-size:36px;color:#00d4aa;background:rgba(0,212,170,.07)}
 .mr{display:inline-block;padding:5px 14px;border-radius:16px;font-family:Courier,monospace;font-weight:700;font-size:15px;letter-spacing:2px;background:rgba(0,212,170,.1);color:#00d4aa;border:1px solid rgba(0,212,170,.2)}
 .ov{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,15,.92);display:-webkit-box;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;-webkit-flex-direction:column;flex-direction:column;z-index:200}
-.sp{width:36px;height:36px;border:3px solid #1a1a28;border-top-color:#00d4aa;border-radius:50%;-webkit-animation:ro 1s linear infinite;animation:ro 1s linear infinite}
+.sp2{width:36px;height:36px;border:3px solid #1a1a28;border-top-color:#00d4aa;border-radius:50%;-webkit-animation:ro 1s linear infinite;animation:ro 1s linear infinite}
 @-webkit-keyframes ro{to{-webkit-transform:rotate(360deg)}}
 @keyframes ro{to{transform:rotate(360deg)}}
 .f2{margin-top:48px;text-align:center;opacity:.2;font-size:10px}
@@ -68,69 +73,191 @@ select{cursor:pointer}
 <body>
 <div class="gbg"></div>
 <div id="pt"><div id="pv"></div></div>
-<div class="w" id="app">
+<div class="w">
   <div class="hd"><div class="lg" id="ltap">COMPONOUS</div><div class="tg">Photonics · Sensing · Innovation</div><div class="bg">ΣΦΗΜΜΥ17 · Πολυτεχνείο Κρήτης</div></div>
   <div id="nv" class="nv"></div>
   <div id="ct"></div>
-  <div class="f2">&copy; 2026 Componous</div>
+  <div class="f2">&copy; 2026 Componous · Optical Fiber Sensors &amp; Readout Optoelectronics</div>
 </div>
 <script>
 (function(){
 // ═══ GOOGLE SHEETS URL ═══
-var SHEET_URL="https://script.google.com/macros/s/AKfycbwIz-lxYm5aZOALVb8OEeHWyo7hHmHPCUON7GDguitSU9TO3fJjqMbqk2mXLA0vf94X/exec";
+var SHEET_URL="https://script.google.com/macros/s/AKfycbwWR1dwtNvF6HgkGIk3ITFyl0ylaLcGSqajIfoqmpbhutB6L3CoyfzYb0B5ghFr800/exec";
 
-var LB=["Στοιχεία","Ψυχογράφημα","Χαρακτήρας","Personality","Τεχνικά","Σενάρια"],TT=6;
-var pQ=[{id:"p1",q:"Τελευταίο βιβλίο/podcast; Γιατί;",h:"Αν δεν διαβάζεις πες το."},{id:"p2",q:"Μαγειρεύεις; Signature φαγητό;",h:""},{id:"p3",q:"Δουλειά στη Φλώρινα — πρώτη σκέψη;",h:"Ειλικρίνεια."},{id:"p4",q:"Έζησες μακριά; Πώς;",h:""},{id:"p5",q:"Τι ομάδα;",h:""}];
-var cQ=[{id:"c1",t:"o",q:"Ομαδική, μέλος δεν κάνει τίποτα. Ρεαλιστικά;",h:""},{id:"c2",t:"o",q:"Απέτυχες. Τι πήρες;",h:"Project, μάθημα, οτιδήποτε."},{id:"c3",t:"m",q:"Παρασκευή βράδυ;",o:["Βγαίνω","Σπίτι","Project","Εξαρτάται"]},{id:"c4",t:"o",q:"Project χωρίς οδηγίες. Πρώτο βήμα;",h:""},{id:"c5",t:"o",q:"Weird skill;",h:"Χιούμορ."},{id:"c6",t:"s",q:"\"Μέτρια μόνος > τέλεια σε ομάδα\"",sl:["Καθόλου","Λίγο","Μέτρια","Αρκετά","Απόλυτα"]}];
-var mQ=[{d:"EI",q:"Networking:",a:"Πολλούς",b:"1-2 βαθιά",aV:"E",bV:"I"},{d:"EI",q:"Φορτίζω:",a:"Κόσμο",b:"Μόνος",aV:"E",bV:"I"},{d:"EI",q:"Δουλειά:",a:"Open, brainstorm",b:"Ήσυχο, focus",aV:"E",bV:"I"},{d:"SN",q:"Πρόβλημα:",a:"Facts πρώτα",b:"Μεγάλη εικόνα",aV:"S",bV:"N"},{d:"SN",q:"Ενθουσιάζει:",a:"Hands-on",b:"Σχεδιασμός",aV:"S",bV:"N"},{d:"SN",q:"Εαυτός:",a:"Πρακτικός",b:"Οραματιστής",aV:"S",bV:"N"},{d:"TF",q:"Αποφάσεις:",a:"Λογική",b:"Άνθρωποι",aV:"T",bV:"F"},{d:"TF",q:"Διαφωνία:",a:"Δίκιο βάσει facts",b:"Λύση για όλους",aV:"T",bV:"F"},{d:"TF",q:"Ομάδα:",a:"Αποτελεσματικότητα",b:"Αρμονία",aV:"T",bV:"F"},{d:"JP",q:"Deadline:",a:"Πλάνο τώρα",b:"Υπό πίεση",aV:"J",bV:"P"},{d:"JP",q:"Μέρα:",a:"To-do",b:"Ροή",aV:"J",bV:"P"},{d:"JP",q:"Ταξίδι:",a:"Itinerary",b:"On the spot",aV:"J",bV:"P"}];
-var tQ=[{id:"t1",q:"FBG μετράει;",o:["Θερμοκρασία","Strain & θερμ. (μεταβολή λ)","Αντίσταση","Ακτινοβολία"],c:1},{id:"t2",q:"Op-amp Rf=100k Rin=10k Gain;",o:["+10","-10","+100","-0.1"],c:1},{id:"t3",q:"FBG vs strain gauges;",o:["Φθηνότεροι","ΗΜ, multiplex, ενσωμάτωση","Πιεζοηλ.","Στατική"],c:1},{id:"t4",q:"SPI;",o:["Serial Photonic","Sync Pulse","Serial Peripheral","Signal Processing"],c:2},{id:"t5",q:"ADC;",o:["Αναλ.→ψηφ.","Ενίσχυση οπτ.","Θερμ. laser","Flash"],c:0}];
-var sQ=[{id:"s1",q:"FBG drift σε δεξαμενή. Βήματα;",h:"Σκέψου lab."},{id:"s2",q:"8 σημεία θερμ., 1 ίνα. Hardware;",h:"Τι θα έψαχνες;"},{id:"s3",q:"Πελάτης: refund. Τι κάνεις;",h:"Τεχνικά & επικοινωνιακά."}];
+var LB=["Στοιχεία","Ψυχογράφημα","Χαρακτήρας","Personality","Σενάρια"];
+var TOTAL=5;
+
+// ── PSYCHO ──
+var pQ=[
+  {id:"p1",q:"Αν σκεφτείς το τελευταίο βιβλίο που διάβασες, podcast που άκουσες, ή σειρά που είδες — ποιο ήταν και γιατί σε τράβηξε; Αν δεν κάνεις κάτι από αυτά, πες μας τι κάνεις στον ελεύθερο χρόνο σου.",h:"Μην γράψεις κάτι για εντύπωση — θέλουμε αυθεντικότητα."},
+  {id:"p2",q:"Μαγειρεύεις; Αν ναι, ποιο είναι εκείνο το φαγητό που φτιάχνεις καλύτερα από τον καθένα; Αν όχι, ποιο φαγητό θα ήθελες να μπορείς να φτιάχνεις;",h:""},
+  {id:"p3",q:"Φαντάσου ότι σου προτείνουμε μια θέση στη Φλώρινα — μια μικρή πόλη στη Δυτική Μακεδονία, μακριά από τα μεγάλα αστικά κέντρα. Ποια είναι η πρώτη σκέψη που σου έρχεται, ειλικρινά;",h:"Δεν υπάρχει σωστή απάντηση. Θέλουμε να καταλάβουμε πώς σκέφτεσαι, όχι να ακούσουμε αυτό που νομίζεις ότι θέλουμε."},
+  {id:"p4",q:"Έχεις ζήσει ποτέ μακριά από το σπίτι σου για αρκετό καιρό; Αν ναι, πώς ήταν η εμπειρία και πώς το διαχειρίστηκες; Αν όχι, πώς φαντάζεσαι ότι θα ήταν;",h:""},
+  {id:"p5",q:"Ποια ομάδα υποστηρίζεις — ποδόσφαιρο, μπάσκετ, ή κάτι άλλο; Ή μήπως δεν σε ενδιαφέρει καθόλου ο αθλητισμός; Όλα δεκτά.",h:""}
+];
+
+// ── CHARACTER ──
+var cQ=[
+  {id:"c1",t:"o",q:"Είσαι μέσα σε μια ομαδική εργασία στη σχολή, και ένα μέλος της ομάδας συστηματικά δεν κάνει τίποτα — δεν απαντάει σε μηνύματα, δεν παραδίδει τα μέρη του, και γενικά σας αφήνει στον αέρα. Τι κάνεις ρεαλιστικά; Όχι τι θα έπρεπε να κάνεις θεωρητικά — τι κάνεις στην πράξη;",h:""},
+  {id:"c2",t:"o",q:"Σκέψου κάτι που δοκίμασες — ένα project, μια εξεταστική, μια ιδέα, ένα χόμπι — και δεν πήγε καλά. Τι ήταν, γιατί δεν δούλεψε, και τι πήρες από αυτό;",h:"Η αποτυχία δεν είναι κακό. Θέλουμε να δούμε αν αναλύεις τι πήγε στραβά."},
+  {id:"c3",t:"m",q:"Τελειώνει η εβδομάδα, είναι Παρασκευή βράδυ. Τι κάνεις συνήθως;",o:["Βγαίνω με παρέα — κοινωνικότητα πάνω απ' όλα","Μένω σπίτι — σειρά, gaming, χαλάρωμα","Δουλεύω σε κάποιο δικό μου project","Εξαρτάται εντελώς — κάθε Παρασκευή είναι διαφορετική"]},
+  {id:"c4",t:"o",q:"Φαντάσου ότι σου δίνουμε ένα project εντελώς χωρίς οδηγίες — μόνο το τελικό ζητούμενο. Δεν υπάρχει documentation, δεν υπάρχει κάποιος να ρωτήσεις αμέσως. Ποιο είναι κυριολεκτικά το πρώτο πράγμα που κάνεις;",h:""},
+  {id:"c5",t:"o",q:"Ποια είναι η πιο απρόσμενη ικανότητα ή γνώση που έχεις — κάτι που αν το μάθαινε κάποιος θα εκπλαγεί; Κάτι εντελώς off-topic, fun, ή weird.",h:"Εδώ θέλουμε να δούμε χιούμορ και προσωπικότητα."},
+  {id:"c6",t:"s",q:"Πόσο σε εκφράζει η παρακάτω πρόταση; «Προτιμώ να κάνω κάτι μέτρια μόνος μου, παρά κάτι τέλεια σε ομάδα.»",sl:["Καθόλου","Λίγο","Μέτρια","Αρκετά","Απόλυτα"]}
+];
+
+// ── MBTI LIKERT (1-7 scale) ──
+var mQ=[
+  {d:"EI",q:"Σε ένα event ή συνέδριο, τι σε περιγράφει καλύτερα;",lo:"Μιλάω σε όσους περισσότερους μπορώ, μου δίνει ενέργεια",hi:"Βρίσκω 1-2 άτομα για ουσιαστική κουβέντα και αυτό μου αρκεί",lV:"E",hV:"I"},
+  {d:"EI",q:"Μετά από μια κουραστική μέρα, πώς ξαναφορτίζεις;",lo:"Βγαίνω με φίλους, socializing, κόσμος γύρω μου",hi:"Ησυχία, μόνος μου χρόνος, χόμπι χωρίς παρέα",lV:"E",hV:"I"},
+  {d:"EI",q:"Στο εργασιακό σου περιβάλλον, τι λειτουργεί καλύτερα για σένα;",lo:"Open χώρος, brainstorming, συνεχής επικοινωνία με ομάδα",hi:"Δικός μου χώρος, focus χωρίς διακοπές, δουλεύω καλύτερα μόνος",lV:"E",hV:"I"},
+  {d:"SN",q:"Όταν αντιμετωπίζεις ένα πρόβλημα, από πού ξεκινάς;",lo:"Μαζεύω δεδομένα, κοιτάω τα facts, βήμα-βήμα ανάλυση",hi:"Κοιτάω τη μεγάλη εικόνα πρώτα, σκέφτομαι εναλλακτικές και πιθανότητες",lV:"S",hV:"N"},
+  {d:"SN",q:"Σε ένα νέο project, τι σε ενθουσιάζει περισσότερο;",lo:"Η υλοποίηση — να πιάσω κατσαβίδι, να δω κάτι να δουλεύει",hi:"Ο σχεδιασμός — να σκεφτώ νέες αρχιτεκτονικές, νέες προσεγγίσεις",lV:"S",hV:"N"},
+  {d:"SN",q:"Πώς θα περιέγραφες τον τρόπο που σκέφτεσαι γενικά;",lo:"Πρακτικός, ρεαλιστής, εστιάζω σε αυτό που δουλεύει τώρα",hi:"Δημιουργικός, οραματιστής, σκέφτομαι τι θα μπορούσε να γίνει",lV:"S",hV:"N"},
+  {d:"TF",q:"Όταν πρέπει να πάρεις μια δύσκολη απόφαση, τι μετράει περισσότερο;",lo:"Η λογική, τα δεδομένα, και η αντικειμενική ανάλυση",hi:"Πώς θα επηρεαστούν οι άνθρωποι γύρω μου, η ανθρώπινη πλευρά",lV:"T",hV:"F"},
+  {d:"TF",q:"Σε μια διαφωνία με συνάδελφο ή συμφοιτητή, πώς τη χειρίζεσαι;",lo:"Εστιάζω στο ποιος έχει δίκιο βάσει γεγονότων και στοιχείων",hi:"Ψάχνω λύση που ικανοποιεί όλους, ακόμα κι αν δεν είναι η ιδανική τεχνικά",lV:"T",hV:"F"},
+  {d:"TF",q:"Τι εκτιμάς περισσότερο σε μια ομάδα;",lo:"Αποτελεσματικότητα, ικανότητα, ποιότητα δουλειάς",hi:"Καλή ατμόσφαιρα, αρμονία, σωστή επικοινωνία",lV:"T",hV:"F"},
+  {d:"JP",q:"Έχεις ένα deadline σε δύο εβδομάδες. Πώς δουλεύεις;",lo:"Φτιάχνω πλάνο από την πρώτη μέρα και ακολουθώ timeline",hi:"Δουλεύω καλύτερα κοντά στο deadline, υπό πίεση",lV:"J",hV:"P"},
+  {d:"JP",q:"Πώς οργανώνεις τη μέρα σου;",lo:"To-do lists, agenda, δομημένο πρόγραμμα — μ' αρέσει η τάξη",hi:"Πάω με τη ροή, αυτοσχεδιάζω, δεν με βοηθούν τα αυστηρά πλάνα",lV:"J",hV:"P"},
+  {d:"JP",q:"Αν σχεδιάζεις ένα ταξίδι, τι κάνεις;",lo:"Κλείνω ξενοδοχεία, φτιάχνω itinerary, θέλω να ξέρω τι θα κάνω",hi:"Αποφασίζω on the spot — η ευελιξία είναι μέρος της εμπειρίας",lV:"J",hV:"P"}
+];
+
+// ── SCENARIOS (open) ──
+var sQ=[
+  {id:"s1",q:"Φαντάσου ένα πυκνό νησιωτικό σύμπλεγμα στην Ελλάδα — σαν τις Κυκλάδες. Δεκάδες νησιά κοντά μεταξύ τους, με μόνιμους κατοίκους, τουρίστες, και ανάγκη για αξιόπιστη επικοινωνία τόσο μεταξύ τους όσο και με τον υπόλοιπο κόσμο. Αν σου ζητούσαν να σχεδιάσεις το τηλεπικοινωνιακό δίκτυο από το μηδέν, χρησιμοποιώντας όλες τις σύγχρονες τεχνολογίες που έχεις στη διάθεσή σου, πώς θα το έκανες; Εξήγησε τη σκέψη σου.",h:"Δεν χρειάζεται η τέλεια απάντηση — θέλουμε να δούμε πώς δομείς ένα πρόβλημα."},
+  {id:"s2",q:"Ένας ηλιακός θερμοσίφωνας χρησιμοποιεί τον ήλιο για να ζεστάνει νερό. Η Componous κατασκευάζει αισθητήρες οπτικών ινών (FBG) που μετρούν θερμοκρασία και παραμόρφωση σε βιομηχανικές εφαρμογές. Θα πρότεινες τη χρήση ενός τέτοιου αισθητήρα για τη μέτρηση θερμοκρασίας σε έναν οικιακό ηλιακό θερμοσίφωνα; Γιατί ναι ή γιατί όχι; Σκέψου κόστος, ανάγκες, εναλλακτικές.",h:"Η σωστή απάντηση μπορεί να είναι και «όχι» — θέλουμε κρίση, όχι πώληση."},
+  {id:"s3",q:"Στη σύγχρονη ηλεκτρονική σχεδίαση, υπάρχει πληθώρα από έτοιμα integrated circuits (ICs) σχεδόν για κάθε πρόβλημα — ενισχυτές, ADCs, μικροελεγκτές, drivers. Ταυτόχρονα, μπορείς να σχεδιάσεις κάτι custom από το μηδέν (discrete κύκλωμα, FPGA, custom ASIC). Πότε θα αποφάσιζες να χρησιμοποιήσεις ένα έτοιμο IC και πότε να αναπτύξεις κάτι δικό σου; Ποια κριτήρια θα χρησιμοποιούσες;",h:""},
+  {id:"s4",q:"Χρησιμοποίησες κάποιο AI tool (ChatGPT, Claude, Gemini, κλπ) για τις απαντήσεις σου σε αυτό το ερωτηματολόγιο; Αν ναι, σε ποιες ερωτήσεις και πόσο σε βοήθησε;",h:"Δεν εξετάζεσαι — επιτρέπεται. Be honest. Θέλουμε να δούμε αν αναγνωρίζεις πότε ένα εργαλείο σε βοηθά πραγματικά και πότε όχι."}
+];
+
 var TN={INTJ:"Architect",INTP:"Logician",ENTJ:"Commander",ENTP:"Debater",INFJ:"Advocate",INFP:"Mediator",ENFJ:"Protagonist",ENFP:"Campaigner",ISTJ:"Logistician",ISFJ:"Defender",ESTJ:"Executive",ESFJ:"Consul",ISTP:"Virtuoso",ISFP:"Adventurer",ESTP:"Entrepreneur",ESFP:"Entertainer"};
 
-var sec=0,tq=0,mq=0,inf={n:"",e:"",p:"",y:"",d:"",i:""},an={},ta={},ma={},tn=0,tt2=null;
+// ═══ STATE ═══
+var sec=0,mq=0;
+var inf={n:"",e:"",p:"",y:"",d:"",i:""};
+var an={},ma={};
+
 function E(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
 function G(id){return document.getElementById(id)}
-function mb(){var s={E:0,I:0,S:0,N:0,T:0,F:0,J:0,P:0};for(var k in ma)if(ma.hasOwnProperty(k))s[ma[k]]=(s[ma[k]]||0)+1;return(s.E>=s.I?"E":"I")+(s.S>=s.N?"S":"N")+(s.T>=s.F?"T":"F")+(s.J>=s.P?"J":"P")}
+
+function mbtiCalc(){
+  // Each dimension: average of 3 questions (1-7 scale). <=3.5 = left trait, >3.5 = right trait
+  var dims={EI:[],SN:[],TF:[],JP:[]};
+  for(var k in ma){if(ma.hasOwnProperty(k)){var q=mQ[parseInt(k)];if(q)dims[q.d].push(ma[k])}}
+  function avg(arr){if(!arr.length)return 4;var s=0;for(var i=0;i<arr.length;i++)s+=arr[i];return s/arr.length}
+  var ei=avg(dims.EI),sn=avg(dims.SN),tf=avg(dims.TF),jp=avg(dims.JP);
+  return(ei<=3.5?mQ[0].lV:mQ[0].hV)+(sn<=3.5?mQ[3].lV:mQ[3].hV)+(tf<=3.5?mQ[6].lV:mQ[6].hV)+(jp<=3.5?mQ[9].lV:mQ[9].hV);
+}
+
 function gr(ids){for(var i=0;i<ids.length;i++){var el=G("a-"+ids[i]);if(el)an[ids[i]]=el.value}}
-function nv(){var h="";if(sec<TT)for(var i=0;i<LB.length;i++)h+='<span class="'+(i===sec?"ac":i<sec?"dn":"ft")+'">'+LB[i]+"</span>";G("nv").innerHTML=h;G("pv").style.width=Math.min(100,Math.round(sec/TT*100))+"%"}
-function go(){nv();window.scrollTo(0,0);[r0,r1,r2,r3,r4,r5,r6][sec]()}
+function nv(){var h="";if(sec<TOTAL)for(var i=0;i<LB.length;i++)h+='<span class="'+(i===sec?"ac":i<sec?"dn":"ft")+'">'+LB[i]+"</span>";G("nv").innerHTML=h;G("pv").style.width=Math.min(100,Math.round(sec/TOTAL*100))+"%"}
+function go(){nv();window.scrollTo(0,0);[r0,r1,r2,r3,r4,r5][sec]()}
+
+// HELPERS
 function so(a,c){var h="";for(var i=0;i<a.length;i++)h+='<option value="'+E(a[i])+'"'+(c===a[i]?" selected":"")+">"+(a[i]||"Επίλεξε...")+"</option>";return h}
 function oq(q,t){return'<div class="cd"><div class="qt">'+E(q.q)+"</div>"+(q.h?'<div class="qh">'+E(q.h)+"</div>":"")+'<textarea id="a-'+q.id+'"'+(t?' class="tl"':"")+' placeholder="Γράψε εδώ...">'+E(an[q.id]||"")+"</textarea></div>"}
 function cl(p,c,v){var s=p.querySelectorAll("."+c);for(var i=0;i<s.length;i++)s[i].className=c;v.className=c+" s"}
 
-function r0(){G("ct").innerHTML='<div class="sc"><div class="tt">Πες μας λίγα</div><div class="su">~20 λεπτά.</div><div class="fg"><div><span class="lb">Ονοματεπώνυμο *</span><input type="text" id="fn" value="'+E(inf.n)+'" placeholder="Μαρία Παπαδοπούλου"></div><div><span class="lb">Email *</span><input type="email" id="fe" value="'+E(inf.e)+'" placeholder="email@example.com"></div><div><span class="lb">Τηλ</span><input type="text" id="fp" value="'+E(inf.p)+'" placeholder="69..."></div><div><span class="lb">Έτος</span><select id="fy">'+so(["","3ο","4ο","5ο","MSc","Απόφοιτος"],inf.y)+'</select></div><div><span class="lb">Κατεύθυνση</span><select id="fd">'+so(["","Φωτονική","Ηλεκτρονική","Τηλεπ.","Ενέργεια","Embedded","Υλικά","Composites","Άλλο"],inf.d)+'</select></div><div><span class="lb">Ενδιαφέρον</span><select id="fi">'+so(["","Πρακτική","Εργασία","Και τα δύο","Μάθω"],inf.i)+"</select></div></div>"+'<div class="br"><button class="bn" id="b0">Πάμε →</button></div></div>';
-G("b0").onclick=function(){inf.n=G("fn").value;inf.e=G("fe").value;inf.p=G("fp").value;inf.y=G("fy").value;inf.d=G("fd").value;inf.i=G("fi").value;if(!inf.n.trim()||!inf.e.trim()){alert("Όνομα & email");return}sec=1;go()}}
+// ── 0 INFO ──
+function r0(){
+  G("ct").innerHTML='<div class="sc"><div class="tt">Πες μας λίγα για σένα</div><div class="su">Η Componous αναζητά μηχανικούς για πρακτική άσκηση και θέσεις εργασίας στη φωτονική, τους αισθητήρες οπτικών ινών, και την οπτοηλεκτρονική. Το ερωτηματολόγιο θα πάρει περίπου 20 λεπτά.</div><div class="fg">'+
+    '<div><span class="lb">Ονοματεπώνυμο *</span><input type="text" id="fn" value="'+E(inf.n)+'" placeholder="π.χ. Μαρία Παπαδοπούλου"></div>'+
+    '<div><span class="lb">Email *</span><input type="email" id="fe" value="'+E(inf.e)+'" placeholder="email@example.com"></div>'+
+    '<div><span class="lb">Τηλέφωνο</span><input type="text" id="fp" value="'+E(inf.p)+'" placeholder="69..."></div>'+
+    '<div><span class="lb">Έτος σπουδών</span><select id="fy">'+so(["","3ο έτος","4ο έτος","5ο έτος","Μεταπτυχιακό","Απόφοιτος"],inf.y)+'</select></div>'+
+    '<div><span class="lb">Κατεύθυνση / Εξειδίκευση</span><select id="fd">'+so(["","Φωτονική / Οπτοηλεκτρονική","Ηλεκτρονική / Κυκλώματα","Τηλεπικοινωνίες","Ενέργεια","Embedded / Software","Υλικά / Νανοτεχνολογία","Μηχανολογία / Composites","Άλλο"],inf.d)+'</select></div>'+
+    '<div><span class="lb">Τι σε ενδιαφέρει;</span><select id="fi">'+so(["","Πρακτική Άσκηση","Θέση Εργασίας","Και τα δύο","Θέλω να μάθω περισσότερα"],inf.i)+'</select></div>'+
+  '</div><div class="br"><button class="bn" id="b0">Πάμε παρακάτω →</button></div></div>';
+  G("b0").onclick=function(){inf.n=G("fn").value;inf.e=G("fe").value;inf.p=G("fp").value;inf.y=G("fy").value;inf.d=G("fd").value;inf.i=G("fi").value;if(!inf.n.trim()||!inf.e.trim()){alert("Συμπλήρωσε τουλάχιστον όνομα και email.");return}sec=1;go()};
+}
 
-function r1(){var ids=[];var h='<div class="sc"><div class="tt">Ψυχογράφημα</div><div class="su">Σε γνωρίζουμε.</div><div class="fg">';for(var i=0;i<pQ.length;i++){ids.push(pQ[i].id);h+=oq(pQ[i])}h+='</div><div class="br"><button class="bb" id="x1">←</button><button class="bn" id="b1">Χαρακτήρας →</button></div></div>';G("ct").innerHTML=h;
-G("x1").onclick=function(){gr(ids);sec=0;go()};G("b1").onclick=function(){gr(ids);sec=2;go()}}
+// ── 1 PSYCHO ──
+function r1(){
+  var ids=[];var h='<div class="sc"><div class="tt">Ψυχογράφημα</div><div class="su">Σε αυτή την ενότητα δεν υπάρχουν σωστές ή λάθος απαντήσεις. Θέλουμε να σε γνωρίσουμε σαν άνθρωπο, όχι σαν βιογραφικό.</div><div class="fg">';
+  for(var i=0;i<pQ.length;i++){ids.push(pQ[i].id);h+=oq(pQ[i])}
+  h+='</div><div class="br"><button class="bb" id="x1">←</button><button class="bn" id="b1">Χαρακτήρας →</button></div></div>';
+  G("ct").innerHTML=h;
+  G("x1").onclick=function(){gr(ids);sec=0;go()};G("b1").onclick=function(){gr(ids);sec=2;go()};
+}
 
-function r2(){var oi=[];var h='<div class="sc"><div class="tt">Χαρακτήρας</div><div class="su">Τι σε ξεχωρίζει.</div><div class="fg">';
-for(var i=0;i<cQ.length;i++){var q=cQ[i];if(q.t==="o"){oi.push(q.id);h+=oq(q)}else if(q.t==="m"){h+='<div class="cd"><div class="qt">'+E(q.q)+'</div>';for(var j=0;j<q.o.length;j++)h+='<div class="op'+(an[q.id]===q.o[j]?" s":"")+'" data-q="'+q.id+'" data-v="'+E(q.o[j])+'">'+E(q.o[j])+"</div>";h+="</div>"}else if(q.t==="s"){h+='<div class="cd"><div class="qt">'+E(q.q)+'</div><div class="sk">';for(var j=0;j<q.sl.length;j++){var v=j+1;h+='<div class="si'+(an[q.id]===v?" s":"")+'" data-q="'+q.id+'" data-v="'+v+'"><div class="sn">'+v+'</div><div class="sl">'+E(q.sl[j])+"</div></div>"}h+="</div></div>"}}
-h+='</div><div class="br"><button class="bb" id="x2">←</button><button class="bn" id="b2">Personality →</button></div></div>';G("ct").innerHTML=h;
-var ops=G("ct").querySelectorAll(".op");for(var i=0;i<ops.length;i++)ops[i].onclick=function(){an[this.getAttribute("data-q")]=this.getAttribute("data-v");cl(this.parentNode,"op",this)};
-var sis=G("ct").querySelectorAll(".si");for(var i=0;i<sis.length;i++)sis[i].onclick=function(){an[this.getAttribute("data-q")]=parseInt(this.getAttribute("data-v"));cl(this.parentNode,"si",this)};
-G("x2").onclick=function(){gr(oi);sec=1;go()};G("b2").onclick=function(){gr(oi);sec=3;mq=0;go()}}
+// ── 2 CHARACTER ──
+function r2(){
+  var oi=[];var h='<div class="sc"><div class="tt">Χαρακτήρας &amp; Τρόπος Σκέψης</div><div class="su">Εδώ βλέπουμε πώς αντιδράς σε καταστάσεις, τι σε κινητοποιεί, και αν έχεις χιούμορ.</div><div class="fg">';
+  for(var i=0;i<cQ.length;i++){var q=cQ[i];
+    if(q.t==="o"){oi.push(q.id);h+=oq(q)}
+    else if(q.t==="m"){h+='<div class="cd"><div class="qt">'+E(q.q)+'</div>';for(var j=0;j<q.o.length;j++)h+='<div class="op'+(an[q.id]===q.o[j]?" s":"")+'" data-q="'+q.id+'" data-v="'+E(q.o[j])+'">'+E(q.o[j])+"</div>";h+="</div>"}
+    else if(q.t==="s"){h+='<div class="cd"><div class="qt">'+E(q.q)+'</div><div class="sk">';for(var j=0;j<q.sl.length;j++){var v=j+1;h+='<div class="si'+(an[q.id]===v?" s":"")+'" data-q="'+q.id+'" data-v="'+v+'"><div class="sn">'+v+'</div><div class="sl">'+E(q.sl[j])+"</div></div>"}h+="</div></div>"}}
+  h+='</div><div class="br"><button class="bb" id="x2">←</button><button class="bn" id="b2">Personality Test →</button></div></div>';
+  G("ct").innerHTML=h;
+  var ops=G("ct").querySelectorAll(".op");for(var i=0;i<ops.length;i++)ops[i].onclick=function(){an[this.getAttribute("data-q")]=this.getAttribute("data-v");cl(this.parentNode,"op",this)};
+  var sis=G("ct").querySelectorAll(".si");for(var i=0;i<sis.length;i++)sis[i].onclick=function(){an[this.getAttribute("data-q")]=parseInt(this.getAttribute("data-v"));cl(this.parentNode,"si",this)};
+  G("x2").onclick=function(){gr(oi);sec=1;go()};G("b2").onclick=function(){gr(oi);sec=3;mq=0;go()};
+}
 
-function r3(){var q=mQ[mq];var h='<div class="sc"><div class="tt">Personality</div><div class="su">'+(mq+1)+"/"+mQ.length+"</div>";h+='<div class="cd"><div class="qt" style="font-size:15px;margin-bottom:12px">'+E(q.q)+'</div><div class="mp"><div class="mx'+(ma[mq]===q.aV?" s":"")+'" data-v="'+q.aV+'">'+E(q.a)+'</div><div class="mx'+(ma[mq]===q.bV?" s":"")+'" data-v="'+q.bV+'">'+E(q.b)+"</div></div></div>";h+='<div class="dt">';for(var i=0;i<mQ.length;i++)h+='<i class="'+(i===mq?"ac":ma[i]?"dn":"")+'"></i>';h+="</div>";h+='<div class="br"><button class="bb" id="x3">←</button><button class="bn" id="b3"'+(ma[mq]==null?" disabled":"")+">"+(mq<mQ.length-1?"Επόμενη →":"Τεχνικά →")+"</button></div></div>";G("ct").innerHTML=h;
-var ms=G("ct").querySelectorAll(".mx");for(var i=0;i<ms.length;i++)ms[i].onclick=function(){ma[mq]=this.getAttribute("data-v");r3()};
-G("x3").onclick=function(){if(mq>0){mq--;r3()}else{sec=2;go()}};G("b3").onclick=function(){if(ma[mq]==null)return;if(mq<mQ.length-1){mq++;r3()}else{sec=4;tq=0;go()}}}
+// ── 3 MBTI (Likert 1-7) ──
+function r3(){
+  var q=mQ[mq];
+  var sizes=[14,18,22,24,22,18,14]; // dot sizes for 7-point scale
+  var h='<div class="sc"><div class="tt">Personality Test</div><div class="su">Ερώτηση '+(mq+1)+' από '+mQ.length+'. Σύρε τον εαυτό σου στην κλίμακα — δεν υπάρχει σωστό ή λάθος.</div>';
+  h+='<div class="cd"><div class="qt" style="font-size:15px;margin-bottom:14px">'+E(q.q)+'</div>';
+  h+='<div class="lk">';
+  h+='<div class="lk-labels"><span>'+E(q.lo)+'</span><span>'+E(q.hi)+'</span></div>';
+  h+='<div class="lk-row">';
+  for(var i=1;i<=7;i++){
+    h+='<div class="lk-dot'+(ma[mq]===i?" s":"")+'" data-v="'+i+'"><i style="width:'+sizes[i-1]+'px;height:'+sizes[i-1]+'px"></i></div>';
+  }
+  h+='</div></div></div>';
+  h+='<div class="dt">';for(var i=0;i<mQ.length;i++)h+='<i class="'+(i===mq?"ac":ma[i]?"dn":"")+'"></i>';h+='</div>';
+  h+='<div class="br"><button class="bb" id="x3">←</button><button class="bn" id="b3"'+(ma[mq]==null?" disabled":"")+'>'+(mq<mQ.length-1?"Επόμενη →":"Σενάρια →")+'</button></div></div>';
+  G("ct").innerHTML=h;
+  var dots=G("ct").querySelectorAll(".lk-dot");
+  for(var i=0;i<dots.length;i++)dots[i].onclick=function(){ma[mq]=parseInt(this.getAttribute("data-v"));r3()};
+  G("x3").onclick=function(){if(mq>0){mq--;r3()}else{sec=2;go()}};
+  G("b3").onclick=function(){if(ma[mq]==null)return;if(mq<mQ.length-1){mq++;r3()}else{sec=4;go()}};
+}
 
-function r4(){var q=tQ[tq];var h='<div class="sc"><div class="tt">Τεχνικά</div><div class="su">'+(tq+1)+"/"+tQ.length+"</div>";h+='<div class="cd"><div class="qt" style="font-size:15px;margin-bottom:14px">'+E(q.q)+"</div>";for(var i=0;i<q.o.length;i++)h+='<div class="tp'+(ta[tq]===i?" s":"")+'" data-i="'+i+'"><span class="tl2">'+String.fromCharCode(65+i)+"</span>"+E(q.o[i])+"</div>";h+="</div>";h+='<div class="dt">';for(var i=0;i<tQ.length;i++)h+='<i class="'+(i===tq?"ac":ta[i]!=null?"dn":"")+'"></i>';h+="</div>";h+='<div class="br"><button class="bb" id="x4">←</button><button class="bn" id="b4"'+(ta[tq]==null?" disabled":"")+">"+(tq<tQ.length-1?"Επόμενη →":"Σενάρια →")+"</button></div></div>";G("ct").innerHTML=h;
-var ts=G("ct").querySelectorAll(".tp");for(var i=0;i<ts.length;i++)ts[i].onclick=function(){ta[tq]=parseInt(this.getAttribute("data-i"));r4()};
-G("x4").onclick=function(){if(tq>0){tq--;r4()}else{sec=3;mq=mQ.length-1;go()}};G("b4").onclick=function(){if(ta[tq]==null)return;if(tq<tQ.length-1){tq++;r4()}else{sec=5;go()}}}
+// ── 4 SCENARIOS ──
+function r4(){
+  var ids=[];var h='<div class="sc"><div class="tt">Σενάρια &amp; Τεχνική Σκέψη</div><div class="su">Αυτές οι ερωτήσεις δεν έχουν μία σωστή απάντηση. Μας ενδιαφέρει η σκέψη σου, η λογική, και πώς δομείς ένα πρόβλημα. Γράψε ελεύθερα.</div><div class="fg">';
+  for(var i=0;i<sQ.length;i++){ids.push(sQ[i].id);h+=oq(sQ[i],true)}
+  h+='</div><div class="br"><button class="bb" id="x4">←</button><button class="bn" id="b4">Υποβολή ✓</button></div></div>';
+  G("ct").innerHTML=h;
+  G("x4").onclick=function(){gr(ids);mq=mQ.length-1;sec=3;go()};
+  G("b4").onclick=function(){
+    gr(ids);
+    var mt=mbtiCalc(),mn=TN[mt]||mt;
+    // Build MBTI detail scores
+    var dims={EI:[],SN:[],TF:[],JP:[]};
+    for(var k in ma){if(ma.hasOwnProperty(k)){var q2=mQ[parseInt(k)];if(q2)dims[q2.d].push(ma[k])}}
+    function avg(a){if(!a.length)return 4;var s=0;for(var i=0;i<a.length;i++)s+=a[i];return Math.round(s/a.length*10)/10}
+    var mbtiDetail="EI:"+avg(dims.EI)+" SN:"+avg(dims.SN)+" TF:"+avg(dims.TF)+" JP:"+avg(dims.JP);
+    
+    var pl={name:inf.n,email:inf.e,phone:inf.p,year:inf.y,direction:inf.d,interest:inf.i,answers:JSON.parse(JSON.stringify(an)),mbtiAnswers:JSON.parse(JSON.stringify(ma)),mbtiType:mt,mbtiName:mn,mbtiDetail:mbtiDetail,timestamp:Date.now()};
+    var ov=document.createElement("div");ov.className="ov";ov.innerHTML='<div class="sp2"></div><div style="color:#00d4aa;font-size:13px;margin-top:14px">Αποστολή...</div>';document.body.appendChild(ov);
+    function done(){if(ov.parentNode)ov.parentNode.removeChild(ov);sec=5;go()}
+    if(SHEET_URL.indexOf("script.google.com")!==-1){var x=new XMLHttpRequest();x.open("POST",SHEET_URL,true);x.setRequestHeader("Content-Type","text/plain");x.onload=done;x.onerror=done;x.send(JSON.stringify(pl))}
+    else{console.log("Payload:",pl);setTimeout(done,400)}
+  };
+}
 
-function r5(){var ids=[];var h='<div class="sc"><div class="tt">Σενάρια</div><div class="su">Πώς σκέφτεσαι.</div><div class="fg">';for(var i=0;i<sQ.length;i++){ids.push(sQ[i].id);h+=oq(sQ[i],true)}h+='</div><div class="br"><button class="bb" id="x5">←</button><button class="bn" id="b5">Υποβολή ✓</button></div></div>';G("ct").innerHTML=h;
-G("x5").onclick=function(){gr(ids);tq=tQ.length-1;sec=4;go()};
-G("b5").onclick=function(){gr(ids);var tc=0;for(var i=0;i<tQ.length;i++)if(ta[i]===tQ[i].c)tc++;var ts=Math.round(tc/tQ.length*100);var mt=mb(),mn=TN[mt]||mt;
-var pl={name:inf.n,email:inf.e,phone:inf.p,year:inf.y,direction:inf.d,interest:inf.i,answers:JSON.parse(JSON.stringify(an)),techAnswers:JSON.parse(JSON.stringify(ta)),mbtiAnswers:JSON.parse(JSON.stringify(ma)),mbtiType:mt,mbtiName:mn,techCorrect:tc,techScore:ts,timestamp:Date.now()};
-var ov=document.createElement("div");ov.className="ov";ov.innerHTML='<div class="sp"></div><div style="color:#00d4aa;font-size:13px;margin-top:14px">Αποστολή...</div>';document.body.appendChild(ov);
-function done(){if(ov.parentNode)ov.parentNode.removeChild(ov);sec=6;go()}
-if(SHEET_URL.indexOf("script.google.com")!==-1){var x=new XMLHttpRequest();x.open("POST",SHEET_URL,true);x.setRequestHeader("Content-Type","text/plain");x.onload=done;x.onerror=done;x.send(JSON.stringify(pl))}else{console.log("Payload:",pl);setTimeout(done,400)}}}
+// ── 5 DONE ──
+function r5(){
+  var mt=mbtiCalc(),mn=TN[mt]||"";
+  G("ct").innerHTML='<div class="sc" style="text-align:center;padding-top:40px">'+
+    '<div class="ck">✓</div>'+
+    '<div style="font-size:22px;font-weight:700;color:#fff;margin-bottom:14px">Ευχαριστούμε πολύ, '+E(inf.n.split(" ")[0])+'!</div>'+
+    '<div style="margin-bottom:6px"><span class="mr">'+mt+'</span></div>'+
+    '<div style="font-size:14px;color:#00d4aa;margin-bottom:4px">'+E(mn)+'</div>'+
+    '<div style="font-size:11px;opacity:.3;margin-bottom:24px">Μάθε περισσότερα στο 16personalities.com</div>'+
+    '<div style="font-size:15px;opacity:.55;line-height:1.7;max-width:420px;margin:0 auto">Θα επικοινωνήσουμε μαζί σου σύντομα. Σε ευχαριστούμε που αφιέρωσες τον χρόνο σου!</div>'+
+    '<div style="margin-top:30px;padding:14px 24px;background:#101018;border:1px solid #1a1a28;border-radius:10px;display:inline-block;font-family:Courier,monospace;font-size:12px;color:#00d4aa">componous.com</div>'+
+  '</div>';
+  G("pv").style.width="100%";
+}
 
-function r6(){var mt=mb(),mn=TN[mt]||"";G("ct").innerHTML='<div class="sc" style="text-align:center;padding-top:40px"><div class="ck">✓</div><div style="font-size:22px;font-weight:700;color:#fff;margin-bottom:14px">Ευχαριστούμε, '+E(inf.n.split(" ")[0])+'!</div><div style="margin-bottom:6px"><span class="mr">'+mt+'</span></div><div style="font-size:14px;color:#00d4aa;margin-bottom:4px">'+E(mn)+'</div><div style="font-size:11px;opacity:.3;margin-bottom:22px">16personalities.com</div><div style="font-size:14px;opacity:.45;line-height:1.6;max-width:380px;margin:0 auto">Αν ταιριάζεις, θα επικοινωνήσουμε.</div><div style="margin-top:30px;padding:14px 24px;background:#101018;border:1px solid #1a1a28;border-radius:10px;display:inline-block;font-family:Courier,monospace;font-size:12px;color:#00d4aa">componous.com</div></div>';G("pv").style.width="100%"}
-
-G("ltap").onclick=function(){tn++;clearTimeout(tt2);tt2=setTimeout(function(){tn=0},1500);if(tn>=5){tn=0;alert("Data → Google Sheets")}};
-go()})();
+G("ltap").onclick=function(){};
+go();
+})();
 </script>
 </body>
 </html>
